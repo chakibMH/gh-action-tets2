@@ -13,7 +13,7 @@ jobs:
             - name: install dependencies
               run: npm ci
             - name: run lint script
-              run: npm lint
+              run: npm run lint
             - run: echo "ran lint"
             # - name: run lint script
             #   run: npm lint
