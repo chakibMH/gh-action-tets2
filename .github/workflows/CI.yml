@@ -1,0 +1,21 @@
+name: CI Pipeline
+on: push
+jobs:
+    execute:
+        runs-on: ubuntu-latest
+        steps:
+            - name: get code
+              uses: actions/checkout@v3
+            - name: install NoedJS3
+              uses: actions/setup-node@v3
+              with:
+                node-versions: 18
+            - name: install dependencies
+              run: npm ci
+            - name: run lint script
+              run: npm lint
+            - run: echo "ran lint"
+            # - name: run lint script
+            #   run: npm lint
+
+            
