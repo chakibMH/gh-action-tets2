@@ -1,0 +1,9 @@
+name: issue listner
+on: issues
+jobs:
+    run-job:
+        runs-on: unbuntu-latest
+        steps:
+            - name: extract context info
+              run: echo "${{toJSON(github)}}"
+              
